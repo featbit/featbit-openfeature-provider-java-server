@@ -20,14 +20,15 @@ class ValueConverter {
             return new Value((String) value);
         } else if (value instanceof Boolean) {
             return new Value(((Boolean) value).booleanValue());
-        } else if (value instanceof Integer) {
-            return new Value(((Integer) value).intValue());
         } else if (value instanceof Number) {
+            if (((Number) value).doubleValue() == ((Number) value).intValue())
+                return new Value(((Number) value).intValue());
             return new Value(((Number) value).doubleValue());
         } else if (value instanceof List) {
-            return new Value(((List<Value>) value).stream()
+            List<Value> lv = (List<Value>) ((List) value).stream()
                     .map(this::toValue)
-                    .collect(Collectors.toList()));
+                    .collect(Collectors.toList());
+            return new Value(lv);
         } else if (value instanceof Map) {
             Map<String, Value> converted = new HashMap<>();
             ((Map) value).forEach((k, v) -> {
