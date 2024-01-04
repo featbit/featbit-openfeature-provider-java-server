@@ -21,9 +21,9 @@ public class FBProvider extends EventProvider {
     }
 
     private final Metadata metadata = new FBProviderMetaData();
-    private final EvaluationContextConverter evaluationContextConverter = EvaluationContextConverter.INSTANCE;
-    private final EvaluationDetailConverter evaluationDetailConverter = EvaluationDetailConverter.INSTANCE;
-    private final ValueConverter valueConverter = ValueConverter.INSTANCE;
+    private final Converter.EvaluationContextConverter evaluationContextConverter = Converter.EvaluationContextConverter.INSTANCE;
+    private final Converter.EvaluationDetailConverter evaluationDetailConverter = Converter.EvaluationDetailConverter.INSTANCE;
+    private final Converter.ValueConverter valueConverter = Converter.ValueConverter.INSTANCE;
     private ProviderState currState = ProviderState.NOT_READY;
     private final FBClient client;
 
