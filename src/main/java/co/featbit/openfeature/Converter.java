@@ -71,19 +71,15 @@ abstract class Converter {
 
         <T> ProviderEvaluation<T> toProviderEvaluation(EvalDetail<T> detail) {
             return buildProviderEvaluation(detail.getVariation(),
-                    detail.getVariationIndex(),
                     detail.getReason(),
                     detail.isDefaultVariation());
         }
 
-        private <T> ProviderEvaluation<T> buildProviderEvaluation(T value, String variant, String reason, boolean isDefault) {
+        private <T> ProviderEvaluation<T> buildProviderEvaluation(T value, String reason, boolean isDefault) {
             ProviderEvaluation.ProviderEvaluationBuilder<T> builder = ProviderEvaluation.<T>builder()
                     .value(value)
                     .reason(reason);
-            if (!isDefault) {
-                builder.variant(variant);
-            }
-            if (isErrorCode(reason)) {
+            if (isDefault && isErrorCode(reason)) {
                 builder.errorCode(getErrorCode(reason));
             }
             return builder.build();
