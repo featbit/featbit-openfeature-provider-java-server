@@ -40,7 +40,6 @@ public class FBProvider extends EventProvider {
     @Override
     public ProviderEvaluation<Boolean> getBooleanEvaluation(String flagKey, Boolean defaultValue, EvaluationContext ctx) {
         return evaluationDetailConverter.toProviderEvaluation(client.boolVariationDetail(flagKey, evaluationContextConverter.toFBUser(ctx), defaultValue));
-
     }
 
     @Override

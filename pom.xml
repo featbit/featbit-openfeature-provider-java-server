@@ -44,6 +44,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <openfeature-version>[1.7.0,2.0.0)</openfeature-version>
         <featbit-java-sdk-version>[1.4.0,2.0.0)</featbit-java-sdk-version>
+        <junit-version>5.8.2</junit-version>
         <slf4j-version>[1.7.0,)</slf4j-version>
     </properties>
     <dependencies>
@@ -62,6 +63,12 @@
             <artifactId>slf4j-simple</artifactId>
             <version>${slf4j-version}</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit-version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

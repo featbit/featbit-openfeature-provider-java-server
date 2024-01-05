@@ -20,6 +20,9 @@ abstract class Converter {
         }
 
         FBUser toFBUser(EvaluationContext evaluationContext) {
+            if (evaluationContext == null) {
+                throw new IllegalArgumentException("The evaluation context must not be null.");
+            }
             Map<String, Value> attributes = evaluationContext.asMap();
             String targetingKey = evaluationContext.getTargetingKey();
             Value keyAsValue = attributes.get("key");
