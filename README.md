@@ -33,18 +33,10 @@ FBConfig config = new FBConfig.Builder()
         .build();
 
 // Synchronous
-OpenFeatureAPI.
-
-getInstance().
-
-setProviderAndWait(new FeatBitProvider(ENV_SECRET, config);
+OpenFeatureAPI.getInstance().setProviderAndWait(new FeatBitProvider(ENV_SECRET, config);
 
 // Asynchronous
-OpenFeatureAPI.
-
-getInstance().
-
-setProvider(new FeatBitProvider(ENV_SECRET, config);
+OpenFeatureAPI.getInstance().setProvider(new FeatBitProvider(ENV_SECRET, config);
 
 // Refer to docs to get a client and perform evaluations.
 ```
