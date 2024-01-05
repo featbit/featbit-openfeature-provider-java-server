@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>co.featbit</groupId>
-    <artifactId>featbit-java-server-openfeature-provider</artifactId>
+    <artifactId>featbit-openfeature-provider-java-server</artifactId>
     <version>1.0.0</version>
 
     <name>featbit/featbit-java-server-openfeature-provider</name>

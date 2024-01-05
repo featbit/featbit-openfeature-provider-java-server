@@ -18,7 +18,7 @@ You can add it to your project using the following dependency.
 <dependencies>
     <dependency>
         <groupId>co.featbit</groupId>
-        <artifactId>featbit-java-server-openfeature-provider</artifactId>
+        <artifactId>featbit-openfeature-provider-java-server</artifactId>
         <version>1.0.0</version>
     </dependency>
 </dependencies>
